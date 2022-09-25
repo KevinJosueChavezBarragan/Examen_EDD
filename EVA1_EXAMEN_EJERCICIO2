@@ -1,0 +1,62 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package eva1_examen_ejercicios;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author yahir
+ */
+public class EVA1_EXAMEN_EJERCICIO2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        Scanner teclado = new Scanner(System.in);
+        
+        int[] arreglo1 = new int[10];
+        int[] arreglo2 = new int[10];
+        boolean iguales = true;
+        
+        System.out.println("ARREGLO 1");
+        for (int i = 0; i < arreglo1.length; i++) {
+            System.out.print("Ingrese datos " + (i+1) + ": ");
+            arreglo1[i] = teclado.nextInt();
+        }
+        
+        System.out.println("");
+        System.out.println("ARREGLO 2");
+        for (int i = 0; i < arreglo2.length; i++) {
+            System.out.print("Ingrese datos " + (i+1) + ": ");
+            arreglo2[i] = teclado.nextInt();
+
+        }
+        System.out.println("");
+        for (int i = 0; i < arreglo1.length && iguales; i++) {
+            if(arreglo1[i] != arreglo2[i]){
+                iguales = false;
+            }
+        }
+        if(iguales){
+            System.out.println("Ambos arreglos son iguales");
+        }else{
+            System.out.println("Los arreglos no son iguales.");
+        }
+       imprimir(arreglo1); 
+       imprimir(arreglo2); 
+       
+       System.out.println("");
+    }
+    public static void imprimir(int[] arreglo){
+        for (int i = 0; i < arreglo.length; i++) {
+            System.out.print("[" + arreglo[i] + "]");
+        }
+        System.out.println("");
+    } 
+    
+}
