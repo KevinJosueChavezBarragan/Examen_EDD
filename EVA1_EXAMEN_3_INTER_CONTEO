@@ -20,14 +20,14 @@ public class EVA1_EXAMEN_3CONTEO {
  imprimir(arreglo1);
  
         System.out.println("");
-        
  for (int i = 0; i < arreglo1.length; i++) {
      for (int j = 0 ; j < arreglo1.length; j++)
          if(arreglo1[i] == arreglo1[j])
              contador++;
-     System.out.print(contador + ",");
+     System.out.print("[" + contador + "]");
      contador = 0;
  }
+ 
     }
     public static void llenar(int[] arreglo){
         for (int i = 0; i < arreglo.length; i++) {
